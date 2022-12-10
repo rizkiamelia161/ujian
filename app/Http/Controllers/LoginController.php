@@ -7,9 +7,14 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\siswa as data;
+use App\Models\guru as dataguru;
 
 class LoginController extends Controller
 {
+    function welcome() {
+        return redirect(route('login'));
+    }
     function index()
     {   
         if (auth()->user()) 
@@ -25,7 +30,7 @@ class LoginController extends Controller
 
     function registration()
     {
-        return view('registration');
+        return view('layouts.registration');
     }
 
     function validate_registration(Request $request)
@@ -68,7 +73,9 @@ class LoginController extends Controller
     {
         if(Auth::check())
         {
-            return view('layouts.dashboard');
+            $siswa = data::get();
+            $guru = dataguru::all();
+    	    return view('layouts.masterData', ['siswa' => $siswa, 'guru' => $guru]);
         }
 
         return redirect('login')->with('success', 'you are not allowed to access');

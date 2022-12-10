@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\dataController;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\LoginController;
 
 /*
@@ -19,7 +19,17 @@ use App\Http\Controllers\LoginController;
 //     return view('welcome');
 // });
 
+// Route::controller(dataController::class)->group(function(){
+//     Route::get('/dashboard', 'index')->name();
+// });
+
+Route::controller(dataController::class)->group(function(){
+    Route::get('violation', 'index')->name('violation');
+});
+
 Route::controller(LoginController::class)->group(function(){
+
+    Route::get('/', 'welcome')->name('home');
 
     Route::get('login', 'index')->name('login');
 
