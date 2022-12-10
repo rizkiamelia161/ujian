@@ -5,7 +5,7 @@
 
 <p align="center">
 <a href="https://github.com/qiraxyz/viriustrade/blob/main/README.md"><img src="https://img.shields.io/badge/status-progress-brightgreen" alt="Progress"></a>
-<a href="https://github.com/qiraxyz/viriustrade/releases"><img src="https://img.shields.io/badge/version-1.0.1-blue" alt="Latest Stable Version"></a>
+<a href="https://github.com/qiraxyz/viriustrade/releases"><img src="https://img.shields.io/badge/Version-2.0.1-blue" alt="Latest Stable Version"></a>
 <a href="https://github.com/qiraxyz/viriustrade/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-green" alt="License"></a>
 </p>
 
