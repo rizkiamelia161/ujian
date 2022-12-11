@@ -3,6 +3,7 @@
 use App\Http\Controllers\dataController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\tambahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,23 @@ use App\Http\Controllers\LoginController;
 // });
 
 Route::controller(dataController::class)->group(function(){
+
     Route::get('violation', 'index')->name('violation');
+
+});
+
+Route::controller(tambahController::class)->group(function(){
+
+    Route::get('siswainput', 'index')->name('siswa');
+
+    Route::post('insertsiswa', 'siswa')->name('insertsiswa');
+
+    Route::get('editsiswa/{id}', 'edit_siswa')->name('edsiswa');
+
+    Route::post('/upsiswa/{id}', 'upsiswas')->name('update_ssiwa');
+
+    Route::get('/deletesiswa/{id}', 'delete_siswa')->name('delsiswa');
+
 });
 
 Route::controller(LoginController::class)->group(function(){

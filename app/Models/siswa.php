@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class siswa extends Model
 {
     use HasFactory;
-
+    protected $guarded = [];
     // protected $table = "siswas";
  
     public function guruss()

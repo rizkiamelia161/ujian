@@ -456,3 +456,124 @@
   .create-tb:hover {
       background-color: #346134ec;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+.sidenav {
+    background-color: #2D2C2C;
+    width: 227px;
+    height: 630px;
+    font-size: 30px;
+}
+.sidenav-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.sidenav img {
+    position: relative;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    left: -10%;
+}
+.sidenav a {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+}
+.sub-sidebar button{
+    position: relative;
+    background-color: #464646;
+    width: 178px;
+    height: 49px;
+    left: 21px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.sub-sidebar button:nth-of-type(2){
+    background-color:  #46B412 ;
+}
+.sub-sidebar button:hover {
+    background-color: #46B412;
+}
+.sub-sidebar a{
+    text-decoration: none;
+    color: white;
+}
+.form {
+    position: absolute;
+    display: flex;
+    top: 5%;
+    left: 30%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.445);
+    width: 700px;
+}
+.form label {
+    position: relative;
+    top: 10px;
+    left: 15px;
+    margin: 0;
+    padding: 0;
+}
+.form input {
+    display: flex;
+    position: relative;
+    left: 100px;
+    top: -23px;
+    width: 500px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4646461e;
+}
+.form button {
+    position: relative;
+    float: right;
+    border-radius: 15px;
+    background-color: #61f11e;
+    color: white;
+    padding: 10px 40px;
+    text-decoration: none;
+    border: none;
+    top: -25px;
+    left: 140px;
+}
+.form .btn-cancel {
+    position: relative;
+    left: 120px;
+    background-color: #464646;
+}
+.form button a {
+    text-decoration: none;
+    color: white;
+}
+.status {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.status img {
+    width: 10px;
+    height: 10px;
+    left: -5px;
+    
+}
+.form-select {
+  position: relative;
+  left: 23%;
+  top: -20px;
+}

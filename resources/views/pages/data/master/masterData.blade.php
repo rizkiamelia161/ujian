@@ -235,7 +235,7 @@
     <h2><strong>Dashboard</strong></h2>
     <hr><br><br>
     <!-- <a href="tambahartikel.php" class="create-tb"></a> -->
-    <form action="tambahartikel.php">
+    <form action="siswainput">
         <input type="submit" value="Adding Siswa" class="create-tb">
     </form>
     
@@ -258,9 +258,11 @@
                                 <th scope="col"><b>Kelas</b></th>
                                 <th scope="col"><b>Jurusan</b></th>
                                 <th scope="col"><b>NISN</b></th>
+                                <th scope="col"><b>Kelamin</b></th>
                                 <th scope="col"><b>Alamat</b></th>
                                 <th scope="col"><b>Nomer Telp</b></th>
                                 <th scope="col"><b>Wali Kelas</b></th>
+                                <th scope="col"><b>Tanggal</b></th>
                                 <th scope="col"><b>Edit</b></th>
                                 <th scope="col"><b>Delete</b></th>
 
@@ -274,11 +276,13 @@
                         <td> {{ $sis->kelas_siswa }} </td>
                         <td> {{ $sis->jurusan }} </td>
                         <td> {{ $sis->nisn }} </td>
+                        <td> {{ $sis->jenis_kelamin }} </td>
                         <td> {{ $sis->alamat }} </td>
                         <td> {{ $sis->no_telp }} </td>
                         <td> {{ $sis->wali_kelas }} </td>
-                        <td><a href=""><button type="button" class="btn btn-success">Edit</button></a></td>
-                        <td><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
+                        <td> {{ $sis->created_at }} </td>
+                        <td><a href="editsiswa/{{$sis->id}}"><button type="button" class="btn btn-success">Edit</button></a></td>
+                        <td><a href="deletesiswa/{{$sis->id}}"><button type="button" class="btn btn-danger">Delete</button></a></td>
                
     
                     </tr>
@@ -295,6 +299,8 @@
                     
                 </div>
                 <br>
+                <br>
+                <h2><strong>Data Guru</strong></h2>
                 <hr>
                 <br>
 
@@ -340,4 +346,56 @@
                                                 
                                 </tbody>
                             </table>
+
+            {{-- data pelanggaran --}}
+                        </div>
+                    </div>
+            <br>
+            <br>
+            <h2><strong>Data Pelanggaran</strong></h2>
+            <hr>
+            <br>
+
+                <form action="insertpelanggaran">
+                    <input type="submit" value="Adding Pelanggaran" class="create-tb">
+                </form>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Last Data</h4>
+                        <h6 class="card-subtitle">Data Pelanggaran related</h6>
+                    </div>
+
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>    
+                                    <th scope="col"><b>ID</b></th>
+                                    <th scope="col"><b>Pelanggaran</b></th>
+                                    <th scope="col"><b>Tindak Lanjut</b></th>
+                                    <th scope="col"><b>Point</b></th>
+                                    <th scope="col"><b>Tanggal</b></th>
+                                    <th scope="col"><b>Edit</b></th>
+                                    <th scope="col"><b>Delete</b></th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($pelanggaran as $pel)               
+                           <tr>
+                            <td> {{ $pel->id }} </td>
+                            <td> {{ $pel->pelanggaran }} </td>
+                            <td> {{ $pel->tindak_lanjut }} </td>
+                            <td> {{ $pel->jumlah_point }} </td>
+                            <td> {{ $pel->created_at }} </td>
+                            <td><a href=""><button type="button" class="btn btn-success">Edit</button></a></td>
+                            <td><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
+        
+                        </tr>
+                        @endforeach 
+                                            
+                            </tbody>
+                        </table>
 @endsection('dashcontent')

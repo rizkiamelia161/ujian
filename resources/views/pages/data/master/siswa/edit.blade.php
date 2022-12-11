@@ -52,7 +52,7 @@
     <span>General</span>
     </li>
     <li class="sidebar-dropdown">
-    <a href="/" class="hover-dashboard">
+    <a href="/" class="clicked-dashboard">
     <i class="fa fa-tachometer-alt"></i>
     <span>Dashboard</span>
     {{-- <span class="badge badge-pill badge-warning">New</span> --}}
@@ -102,7 +102,7 @@
     <!-- Component -->
     
 <li class="sidebar-dropdown">
-    <a href="violation" class="clicked-dashboard">
+    <a href="violation" class="hover-dashboard">
     <i class="far fa-gem"></i>
     <span>Violation</span>
     </a>
@@ -222,76 +222,34 @@
     </div>
     </nav>
 
-{{-- <div class="card">
-	<div class="card-header">Dashboard</div>
-	<div class="card-body">
-		
-		You are Login in Laravel 9 Custom Login Registration Application.
-	</div>
-</div> --}}
 
-<main class="page-content">
-    <div class="container-fluid">
-    <h2><strong>Violation data</strong></h2>
-    <hr><br><br>
-    <!-- <a href="tambahartikel.php" class="create-tb"></a> -->
-    
-                            <!-- PHP -->
-    <div class="container-fluid">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Last Violation Data</h4>
-                    <h6 class="card-subtitle">Data Updated</h6>
-                </div>
-
-
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                        <tr>    
-                                <th scope="col"><b>ID</b></th>
-                                <th scope="col"><b>Nama Siswa</b></th>
-                                <th scope="col"><b>Kelas</b></th>
-                                <th scope="col"><b>Jurusan</b></th>
-                                <th scope="col"><b>Guru Pengurus</b></th>
-                                <th scope="col"><b>Kasus Pelanggaran</b></th>
-                                <th scope="col"><b>Point</b></th>
-                                <th scope="col"><b>Wali Kelas</b></th>
-                                <th scope="col"><b>Tanggal</b></th>
-                                <th scope="col"><b>Edit</b></th>
-                                <th scope="col"><b>Delete</b></th>
-
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($siswa as $sis)               
-                       <tr>
-                        <td>  {{ $sis->id }}  </td>
-                        <td> {{ $sis->nama_siswa }} </td>
-                        <td> {{ $sis->kelas_siswa }} </td>
-                        <td> {{ $sis->jurusan }} </td>
-                        @foreach ($sis->guruss as $gu)
-                        <td> {{ $gu->nama_guru }} </td>      
-                        @endforeach           
-                        @foreach ($sis->Kasus as $ka)
-                        <td> {{ $ka->pelanggaran }} </td>
-                        <td> {{ $ka->jumlah_point }} </td>
-                        <td> {{ $ka->created_at }} </td>  
-                        @endforeach
-                        
-                        <td> {{ $sis->wali_kelas }} </td>
-                        
-                        <td><a href=""><button type="button" class="btn btn-success">Edit</button></a></td>
-                        <td><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
-    
-                    </tr>
-                    @endforeach 
-                                        
-                        </tbody>
-                    </table>
-
-                                
-                        </div>
-@endsection('dashcontent')
+    <div class="form">
+        <form action="/upsiswa/{{$data->id}}" method="POST">
+            @csrf
+          <!-- data pelanggan judul -->
+          <!-- nama siswa -->
+          <p><Label>Nama Siswa : <input value=" {{ $data->nama_siswa }} " required="required" type="text" name="nama_siswa"></Label></p>
+          <!-- kelas siswa -->
+          <p><Label>Kelas : <input value=" {{ $data->nama_siswa }}"" required="required" type="text" name="kelas_siswa"></Label></p>
+          <!-- jurusan siswa -->
+          <p><label>Jurusan : <input value=" {{ $data->nama_siswa }}" required="required" type="text" name="jurusan"></label></p>
+          <!-- nisn siswa -->
+          <p><Label>NISN : <input value=" {{ $data->nisn }}" @disabled(true) required="required" type="text" name="nisn"></Label></p>
+          <p><label class="form-label">Kelamin :</label> <select class="form-select" name="jenis_kelamin" aria-label="Default select example">
+            <option selected>{{ $data->jenis_kelamin }}</option>
+            <option value="Laki-Laki">Laki-Laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+            </p>
+          {{-- alamat siswa --}}
+          <p><Label>Alamat : <input value=" {{ $data->alamat }}" required="required" type="text" name="alamat"></Label></p>
+          <p><Label>Nomor Telp : <input value=" {{ $data->no_telp }}" required="required" type="text" name="no_telp"></Label></p>
+          <p><Label>Wali Kelas : <input value=" {{ $data->wali_kelas }}" required="required" type="text" name="wali_kelas"></Label></p>
+          
+          <br>
+          <br>
+          <button type="submit">Update</button>
+          <button class="btn-cancel"><a href="dashboard">Cancel</a></button>
+      </form>
+        </div>
+    @endsection('dashcontent')

@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Models\siswa as data;
 use App\Models\guru as dataguru;
+use App\Models\pelanggaran as datakasus;
 
 class LoginController extends Controller
 {
@@ -75,7 +76,8 @@ class LoginController extends Controller
         {
             $siswa = data::get();
             $guru = dataguru::all();
-    	    return view('pages.data.master.masterData', ['siswa' => $siswa, 'guru' => $guru]);
+            $pelanggaran = datakasus::all();
+    	    return view('pages.data.master.masterData', ['siswa' => $siswa, 'guru' => $guru, 'pelanggaran' => $pelanggaran]);
         }
 
         return redirect('login')->with('success', 'you are not allowed to access');
