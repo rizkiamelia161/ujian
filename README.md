@@ -25,7 +25,7 @@ buku-siswa is a Student Communication Point Book. this project is created by one
 Qira Project is accessible and powerful.
 
 ```sh
-git clone https://github.com/LumiNovryM/Laravel-Template.git
+git clone https://github.com/qiraxyz/violation-book
 composer install
 composer update
 cp .env.example .env
