@@ -53,6 +53,28 @@ Route::controller(tambahController::class)->group(function(){
 
     Route::get('/deleteguru/{id}', 'delete_guru')->name('delguru');
 
+    // pelanggaran
+    Route::get('kasusinput', 'indexp')->name('pelanggaran');
+
+    Route::post('insertkasus', 'kasus')->name('insertkasus');
+
+    Route::get('editkasus/{id}', 'edit_kasus')->name('edkasus');
+
+    Route::post('/upkasus/{id}', 'upkasuss')->name('update_kasus');
+
+    Route::get('/deletekasus/{id}', 'delete_kasus')->name('delkasus');
+
+    // relasi pivot
+
+    Route::get('transinput', 'tambahkasus')->name('transaksi');
+
+    Route::post('/inserttrans', 'insertkasus');
+
+    Route::get('/deletetrans/{id}', 'delete_trans')->name('deltrans');
+
+
+
+
 });
 
 Route::controller(LoginController::class)->group(function(){

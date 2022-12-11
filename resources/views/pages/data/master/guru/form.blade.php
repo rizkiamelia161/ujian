@@ -232,7 +232,7 @@
           <!-- kelas siswa -->
           <p><Label>Mata Pelajaran : <input required="required" type="text" name="mata_pelajaran"></Label></p>
           <!-- jurusan siswa -->
-          <p><label>Alamat : <input required="required" type="text" name="alamat"></label></p>
+          <p><label>alamat : <input required="required" type="text" name="alamat"></label></p>
           <!-- nisn siswa -->
           <p><Label>Umur : <input  required="required" type="text" name="umur"></Label></p>
           <br>

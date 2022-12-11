@@ -222,82 +222,43 @@
     </div>
     </nav>
 
-{{-- <div class="card">
-	<div class="card-header">Dashboard</div>
-	<div class="card-body">
-		
-		You are Login in Laravel 9 Custom Login Registration Application.
-	</div>
-</div> --}}
 
-<main class="page-content">
-    <div class="container-fluid">
-    <h2><strong>Violation data</strong></h2>
-    <hr><br><br>
-    <form action="transinput">
-        <input type="submit" value="Adding Pelanggaran" class="create-tb">
-    </form>
-                            <!-- PHP -->
-    <div class="container-fluid">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Last Violation Data</h4>
-                    <h6 class="card-subtitle">Data Updated</h6>
-                </div>
-
-
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                        <tr>    
-                                <th scope="col"><b>ID</b></th>
-                                <th scope="col"><b>Nama Siswa</b></th>
-                                <th scope="col"><b>Kelas</b></th>
-                                <th scope="col"><b>Jurusan</b></th>
-                                <th scope="col"><b>Guru Pengurus</b></th>
-                                <th scope="col"><b>Kasus Pelanggaran</b></th>
-                                <th scope="col"><b>Point</b></th>
-                                <th scope="col"><b>Tanggal</b></th>
-                                <th scope="col"><b>Wali Kelas</b></th>
-                               
-
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($siswa as $sis)               
-                       <tr>
-                        <td>  {{ $sis->id }}  </td>
-                        <td> {{ $sis->nama_siswa }} </td>
-                        <td> {{ $sis->kelas_siswa }} </td>
-                        <td> {{ $sis->jurusan }} </td>
-                        @foreach ($sis->guruss as $gu)
-                        <td> {{ $gu->nama_guru }} </td>      
-                        @endforeach           
-                        @foreach ($sis->Kasus as $ka)
-                        <td> {{ $ka->pelanggaran }} </td>
-                        <td> {{ $ka->jumlah_point }} </td>
-                        @endforeach
-                        
-                        <td> {{ $sis->created_at }} </td>  
-                        <td> {{ $sis->wali_kelas }} </td>
-                        
-                        {{-- <td><a href="edittrans/{{$sis->id}}"><button type="button" class="btn btn-success">Edit</button></a></td>
-                        <td><a href="deletetrans/{{$sis->id}}"><button type="button" class="btn btn-danger">Delete</button></a></td>
-     --}}
-                    </tr>
-                    @endforeach 
-                                        
-                        </tbody>
-                    </table>
-                    {{-- @foreach ($siswa as $data)
-                    @foreach ($data->Kasus as $i)
-                    
-                    <p> {{ $i->count() }} </p>
-                    @endforeach
-                        
-                    @endforeach --}}
-                                
-                        </div>
-@endsection('dashcontent')
+    <div class="forms">
+        <form action="/inserttrans" method="POST">
+            @csrf
+          <!-- data pelanggan judul -->
+          <!-- nama siswa -->
+          <p><select class="form-select" id="select-qira" name="siswa_id" aria-label="Default select example">
+            <option selected>Pilih Nama Siswa</option>
+            @foreach($siswa as $data)
+            <option value="{{ $data->id }}">{{ $data->nama_siswa }}</option>
+            @endforeach</select></p>
+            <p><select class="form-select" id="select-qira" name="pelanggaran_id" aria-label="Default select example">
+                <option selected>Point</option>
+                @foreach($pelanggaran as $data)
+                
+                @php
+                $total = 10;
+                @endphp
+                @php
+                    $total += $data->jumlah_point
+                @endphp
+                <option value="{{ $data->id }}">{{ $total }}</option>
+                @endforeach
+                
+              </select></p>
+              <p></p>
+              <select class="form-select" id="select-qiras" name="guru_id" aria-label="Default select example">
+                <option selected>Pilih Guru</option>
+                @foreach($guru as $data)
+                <option value="{{ $data->id }}">{{ $data->nama_guru }}</option>
+                @endforeach
+                
+              </select>   
+          <br>
+          <br>
+          <button type="submit">Update</button>
+          <button class="btn-cancel"><a href="dashboard">Cancel</a></button>
+      </form>
+        </div>
+    @endsection('dashcontent')

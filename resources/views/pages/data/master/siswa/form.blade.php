@@ -245,6 +245,7 @@
           <p><Label>Alamat : <input  required="required" type="text" name="alamat"></Label></p>
           <p><Label>Nomor Telp : <input  required="required" type="text" name="no_telp"></Label></p>
           <p><Label>Wali Kelas : <input  required="required" type="text" name="wali_kelas"></Label></p>
+          <p><Label>Tanggal : <input  required="required" type="date" name="created_at"></Label></p>
           
           <br>
           <br>

@@ -517,6 +517,20 @@
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.445);
     width: 700px;
 }
+.forms {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+    left: 35%;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.445);
+    width: 700px;
+    height: 400px;
+}
 .form label {
     position: relative;
     top: 10px;
@@ -556,6 +570,7 @@
     text-decoration: none;
     color: white;
 }
+
 .status {
     position: absolute;
     bottom: 0;
@@ -576,4 +591,50 @@
   position: relative;
   left: 23%;
   top: -20px;
+}
+#select-qira,
+#select-qiras {
+    position: relative;
+    left: 0 !important;
+    top: -20px !important;
+}
+
+.forms label {
+    position: relative;
+    top: 10px;
+    left: 15px;
+    margin: 0;
+    padding: 0;
+}
+.forms input {
+    display: flex;
+    position: relative;
+    left: 100px;
+    top: -23px;
+    width: 300px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4646461e;
+}
+.forms button {
+    position: relative;
+    float: right;
+    border-radius: 15px;
+    background-color: #61f11e;
+    color: white;
+    padding: 10px 40px;
+    text-decoration: none;
+    border: none;
+    top: -25px;
+    left: -20px;
+}
+.forms .btn-cancel {
+    position: relative;
+    left: -30px;
+    background-color: #464646;
+}
+.forms button a {
+    text-decoration: none;
+    color: white;
 }

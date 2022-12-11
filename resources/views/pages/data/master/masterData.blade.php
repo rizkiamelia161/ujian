@@ -356,9 +356,9 @@
             <hr>
             <br>
 
-                <form action="insertpelanggaran">
-                    <input type="submit" value="Adding Pelanggaran" class="create-tb">
-                </form>
+            <form action="kasusinput">
+                <input type="submit" value="Adding Pelanggaran" class="create-tb">
+            </form>
 
             <div class="col-12">
                 <div class="card">
@@ -390,8 +390,8 @@
                             <td> {{ $pel->tindak_lanjut }} </td>
                             <td> {{ $pel->jumlah_point }} </td>
                             <td> {{ $pel->created_at }} </td>
-                            <td><a href=""><button type="button" class="btn btn-success">Edit</button></a></td>
-                            <td><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
+                            <td><a href="editkasus/{{$pel->id}}"><button type="button" class="btn btn-success">Edit</button></a></td>
+                            <td><a href="deletekasus/{{$pel->id}}"><button type="button" class="btn btn-danger">Delete</button></a></td>
         
                         </tr>
                         @endforeach 
