@@ -42,6 +42,17 @@ Route::controller(tambahController::class)->group(function(){
 
     Route::get('/deletesiswa/{id}', 'delete_siswa')->name('delsiswa');
 
+    // guru
+    Route::get('guruinput', 'indexg')->name('guru');
+
+    Route::post('insertguru', 'guru')->name('insertguru');
+
+    Route::get('editguru/{id}', 'edit_guru')->name('edguru');
+
+    Route::post('/upguru/{id}', 'upgurus')->name('update_gurus');
+
+    Route::get('/deleteguru/{id}', 'delete_guru')->name('delguru');
+
 });
 
 Route::controller(LoginController::class)->group(function(){

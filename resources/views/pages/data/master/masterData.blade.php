@@ -304,7 +304,7 @@
                 <hr>
                 <br>
 
-                    <form action="tambahartikel.php">
+                    <form action="guruinput">
                         <input type="submit" value="Adding Guru" class="create-tb">
                     </form>
 
@@ -338,8 +338,8 @@
                                 <td> {{ $guru->mata_pelajaran }} </td>
                                 <td> {{ $guru->alamat }} </td>
                                 <td> {{ $guru->umur }} </td>
-                                <td><a href=""><button type="button" class="btn btn-success">Edit</button></a></td>
-                                <td><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
+                                <td><a href="editguru/{{$guru->id}}"><button type="button" class="btn btn-success">Edit</button></a></td>
+                                <td><a href="deleteguru/{{$guru->id}}"><button type="button" class="btn btn-danger">Delete</button></a></td>
             
                             </tr>
                             @endforeach 

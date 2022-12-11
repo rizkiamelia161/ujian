@@ -17,11 +17,11 @@ return new class extends Migration
             $table->unsignedBigInteger('siswa_id');
             // $table->foreignId('siswa_id')->constrained('siswas');
             // $table->foreignId('guru_id')->constrained('gurus');
-            $table->foreign('siswa_id')->references('id')->on('siswas');
+            $table->foreign('siswa_id')->references('id')->on('siswas')->onDelete('cascade');
             $table->unsignedBigInteger('guru_id');
-            $table->foreign('guru_id')->references('id')->on('gurus');
+            $table->foreign('guru_id')->references('id')->on('gurus')->onDelete('cascade');
             $table->unsignedBigInteger('pelanggaran_id');
-            $table->foreign('pelanggaran_id')->references('id')->on('pelanggarans');
+            $table->foreign('pelanggaran_id')->references('id')->on('pelanggarans')->onDelete('cascade');
 
         });
     }
