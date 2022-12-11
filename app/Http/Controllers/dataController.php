@@ -22,14 +22,14 @@ class dataController extends Controller
    
     // $siswa = siswa::with('guru')->first();
 
-        return view('layouts.violationData', compact('siswa'));
+        return view('pages.data.pelanggaran.violationData', compact('siswa'));
   }
   public function kasus() {
     $siswa = siswa::with(['kasus'])->get();
    
     // $siswa = siswa::with('guru')->first();
 
-        return view('layouts.violationData', compact('kasus'));
+        return view('pages.data.pelanggaran.violationData', compact('kasus'));
   }
 
   // $posts = Post::with(['tags'])->latest()->paginate(10);

@@ -1,4 +1,4 @@
-@extends('pages.dashboard')
+@extends('layouts.dashboard.dashboard')
 
 @section('dashcontent')
 <div class="page-wrapper chiller-theme toggled">
@@ -261,6 +261,8 @@
                                 <th scope="col"><b>Alamat</b></th>
                                 <th scope="col"><b>Nomer Telp</b></th>
                                 <th scope="col"><b>Wali Kelas</b></th>
+                                <th scope="col"><b>Edit</b></th>
+                                <th scope="col"><b>Delete</b></th>
 
                             </tr>
                         </thead>
@@ -275,7 +277,8 @@
                         <td> {{ $sis->alamat }} </td>
                         <td> {{ $sis->no_telp }} </td>
                         <td> {{ $sis->wali_kelas }} </td>
-                        
+                        <td><a href=""><button type="button" class="btn btn-success">Edit</button></a></td>
+                        <td><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
                
     
                     </tr>
@@ -316,6 +319,8 @@
                                         <th scope="col"><b>Mata Pelajaran</b></th>
                                         <th scope="col"><b>Alamat</b></th>
                                         <th scope="col"><b>Umur</b></th>
+                                        <th scope="col"><b>Edit</b></th>
+                                        <th scope="col"><b>Delete</b></th>
                                         
                                     </tr>
                                 </thead>
@@ -327,6 +332,8 @@
                                 <td> {{ $guru->mata_pelajaran }} </td>
                                 <td> {{ $guru->alamat }} </td>
                                 <td> {{ $guru->umur }} </td>
+                                <td><a href=""><button type="button" class="btn btn-success">Edit</button></a></td>
+                                <td><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
             
                             </tr>
                             @endforeach 

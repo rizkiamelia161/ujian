@@ -23,14 +23,14 @@ class LoginController extends Controller
         }
         else
         {      
-               return view('layouts.login');
+               return view('pages.session.login');
                return redirect(route('login'));
         }
     }
 
     function registration()
     {
-        return view('layouts.registration');
+        return view('pages.session.registration');
     }
 
     function validate_registration(Request $request)
@@ -75,7 +75,7 @@ class LoginController extends Controller
         {
             $siswa = data::get();
             $guru = dataguru::all();
-    	    return view('layouts.masterData', ['siswa' => $siswa, 'guru' => $guru]);
+    	    return view('pages.data.master.masterData', ['siswa' => $siswa, 'guru' => $guru]);
         }
 
         return redirect('login')->with('success', 'you are not allowed to access');

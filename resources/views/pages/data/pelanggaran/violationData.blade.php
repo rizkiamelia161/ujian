@@ -1,4 +1,4 @@
-@extends('pages.dashboard')
+@extends('layouts.dashboard.dashboard')
 
 @section('dashcontent')
 <div class="page-wrapper chiller-theme toggled">
@@ -261,6 +261,10 @@
                                 <th scope="col"><b>Kasus Pelanggaran</b></th>
                                 <th scope="col"><b>Point</b></th>
                                 <th scope="col"><b>Wali Kelas</b></th>
+                                <th scope="col"><b>Tanggal</b></th>
+                                <th scope="col"><b>Edit</b></th>
+                                <th scope="col"><b>Delete</b></th>
+
 
                             </tr>
                         </thead>
@@ -276,12 +280,14 @@
                         @endforeach           
                         @foreach ($sis->Kasus as $ka)
                         <td> {{ $ka->pelanggaran }} </td>
-                        <td> {{ $ka->jumlah_point }} </td>  
+                        <td> {{ $ka->jumlah_point }} </td>
+                        <td> {{ $ka->created_at }} </td>  
                         @endforeach
                         
                         <td> {{ $sis->wali_kelas }} </td>
                         
-                        </td>
+                        <td><a href=""><button type="button" class="btn btn-success">Edit</button></a></td>
+                        <td><a href=""><button type="button" class="btn btn-danger">Delete</button></a></td>
     
                     </tr>
                     @endforeach 

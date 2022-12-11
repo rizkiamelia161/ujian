@@ -16,9 +16,9 @@ class SiswaGuruSeeder extends Seeder
     public function run()
     {
         siswaguru::table('guru_siswas')->insert([
-            "siswa_id" => 2,
-            "guru_id" => 2,
-            "pelanggaran_id" => 2
+            "siswa_id" => 1,
+            "guru_id" => 1,
+            "pelanggaran_id" => 1
         ]);
     }
 }
