@@ -33,7 +33,7 @@ php artisan key:generate
 ```
 Kedua
 ```sh
-cd Laravel-Template 
+cd violation-book
 code .
 ```
 
