@@ -26,16 +26,49 @@ Qira Project is accessible and powerful.
 
 ```sh
 git clone https://github.com/qiraxyz/violation-book
-composer install
-composer update
-cp .env.example .env
-php artisan key:generate
 ```
 Kedua
 ```sh
+composer install
+```
+Ketiga
+```sh
+composer update
+```
+Keempat
+```sh
+cp .env.example .env
+```
+Kelima
+```sh
+php artisan key:generate
+```
+Keenam
+```sh
 cd violation-book
+```
+Ketujuh
+```sh
 code .
 ```
+
+## Tutorial Migrate && Seeder
+Pertama
+```sh
+php artisan migrate
+```
+Kedua
+```sh
+php artisan migrate --seed
+```
+
+<code>
+Relationship Many to Many
+siswa
+guru
+pelanggaran
+</code>
+
 
 
 
