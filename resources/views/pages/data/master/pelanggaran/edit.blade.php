@@ -228,11 +228,11 @@
             @csrf
           <!-- data pelanggan judul -->
           <!-- nama siswa -->
-          <p><Label>Pelanggaran : <input value=" {{ $data->nama_guru }} " required="required" type="text" name="nama_guru"></Label></p>
+          <p><Label>Pelanggaran : <input value=" {{ $data->pelanggaran }} " required="required" type="text" name="pelanggaran"></Label></p>
           <!-- kelas siswa -->
-          <p><Label>Tindakan : <input value=" {{ $data->mata_pelajaran }}"" required="required" type="text" name="mata_pelajaran"></Label></p>
+          <p><Label>Tindakan : <input value=" {{ $data->tindak_lanjut }}"" required="required" type="text" name="tindak_lanjut"></Label></p>
           <!-- jurusan siswa -->
-          <p><label>Point : <input value=" {{ $data->alamat }}" required="required" type="text" name="alamat"></label></p>
+          <p><label>Point : <input value=" {{ $data->jumlah_point }}" required="required" type="text" name="jumlah_point"></label></p>
           <br>
           <br>
           <button type="submit">Update</button>

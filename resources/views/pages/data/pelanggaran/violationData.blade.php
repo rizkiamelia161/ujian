@@ -260,6 +260,7 @@
                                 <th scope="col"><b>Point</b></th>
                                 <th scope="col"><b>Tanggal</b></th>
                                 <th scope="col"><b>Wali Kelas</b></th>
+
                                
 
 
@@ -282,10 +283,11 @@
                         
                         <td> {{ $sis->created_at }} </td>  
                         <td> {{ $sis->wali_kelas }} </td>
+
+                     
                         
-                        {{-- <td><a href="edittrans/{{$sis->id}}"><button type="button" class="btn btn-success">Edit</button></a></td>
+                        {{-- <td><a href="edittrans/{{$sis->id}}"><button type="button" class="btn btn-success">Edit</button></a></td> --}}
                         <td><a href="deletetrans/{{$sis->id}}"><button type="button" class="btn btn-danger">Delete</button></a></td>
-     --}}
                     </tr>
                     @endforeach 
                                         

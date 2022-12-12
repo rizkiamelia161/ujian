@@ -230,9 +230,9 @@
           <!-- nama siswa -->
           <p><Label>Nama Siswa : <input value=" {{ $data->nama_siswa }} " required="required" type="text" name="nama_siswa"></Label></p>
           <!-- kelas siswa -->
-          <p><Label>Kelas : <input value=" {{ $data->nama_siswa }}"" required="required" type="text" name="kelas_siswa"></Label></p>
+          <p><Label>Kelas : <input value=" {{ $data->kelas_siswa }}"" required="required" type="text" name="kelas_siswa"></Label></p>
           <!-- jurusan siswa -->
-          <p><label>Jurusan : <input value=" {{ $data->nama_siswa }}" required="required" type="text" name="jurusan"></label></p>
+          <p><label>Jurusan : <input value=" {{ $data->jurusan }}" required="required" type="text" name="jurusan"></label></p>
           <!-- nisn siswa -->
           <p><Label>NISN : <input value=" {{ $data->nisn }}" @disabled(true) required="required" type="text" name="nisn"></Label></p>
           <p><label class="form-label">Kelamin :</label> <select class="form-select" name="jenis_kelamin" aria-label="Default select example">

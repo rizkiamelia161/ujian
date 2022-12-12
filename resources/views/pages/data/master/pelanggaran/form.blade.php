@@ -233,7 +233,7 @@
           <p><label>Tindakan : <input required="required" type="text" name="tindak_lanjut"></label></p>
           <!-- nisn siswa -->
         
-          <p><Label>Point : <input value="10" required="required" type="text" name="jumlah_point"></Label></p>
+          <p><Label>Point : <input required="required" type="text" name="jumlah_point"></Label></p>
           <br>
           <br>
           <button type="submit">Update</button>

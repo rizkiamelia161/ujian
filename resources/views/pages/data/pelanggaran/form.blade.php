@@ -234,24 +234,17 @@
             <option value="{{ $data->id }}">{{ $data->nama_siswa }}</option>
             @endforeach</select></p>
             <p><select class="form-select" id="select-qira" name="pelanggaran_id" aria-label="Default select example">
-                <option selected>Point</option>
-                @foreach($pelanggaran as $data)
-                
-                @php
-                $total = 10;
-                @endphp
-                @php
-                    $total += $data->jumlah_point
-                @endphp
-                <option value="{{ $data->id }}">{{ $total }}</option>
-                @endforeach
-                
-              </select></p>
+              <option selected>Guru Pengurus</option>
+              @foreach($guru as $data)
+              <option value="{{ $data->id }}">{{ $data->nama_guru }}</option>
+              @endforeach
+              
+            </select></p>
               <p></p>
               <select class="form-select" id="select-qiras" name="guru_id" aria-label="Default select example">
-                <option selected>Pilih Guru</option>
-                @foreach($guru as $data)
-                <option value="{{ $data->id }}">{{ $data->nama_guru }}</option>
+                <option selected>Pelanggaran</option>
+                @foreach($pelanggaran as $data)
+                <option value="{{ $data->id }}">{{ $data->pelanggaran }}</option>
                 @endforeach
                 
               </select>   

@@ -8,6 +8,7 @@ use App\Models\guru;
 use App\Models\pelanggaran as kasus;
 use App\Models\guru_siswa;
 use App\Models\pelanggaran;
+use Illuminate\Support\Facades\DB;
 
 class tambahController extends Controller
 {
@@ -87,24 +88,33 @@ class tambahController extends Controller
         $data->delete();
         return redirect()->route('dashboard')->with('success', 'Data Berhasil Di Hapus');
     }
+
     // relasi transaksi
     public function indexr() {
         return view('pages.data.pelanggaran.form');
     }
+
     public function tambahkasus()
     {
         $siswa = siswa::all();
         $pelanggaran = pelanggaran::all();
         $guru = guru::all();
+        
         return view('pages.data.pelanggaran.form', compact('siswa', 'pelanggaran', 'guru'));
     }
     public function insertkasus(Request $request)
-    {
+    {   
         guru_siswa::insert([
             'guru_id' => $request->guru_id,
             'siswa_id' => $request->siswa_id,
             'pelanggaran_id' => $request->pelanggaran_id,
         ]);
         return redirect()->route('violation')->with('success', 'Data Berhasil Di Tambahkan');
+    }
+    public function delete_trans($id)
+    {
+        $data = DB::table('guru_siswas')->where('siswa_id', $id);
+        $data->delete();
+        return redirect()->route('violation')->with('success', 'Data Berhasil Di Hapus');
     }
 }
