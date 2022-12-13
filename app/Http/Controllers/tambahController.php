@@ -109,12 +109,12 @@ class tambahController extends Controller
             'siswa_id' => $request->siswa_id,
             'pelanggaran_id' => $request->pelanggaran_id,
         ]);
-        return redirect()->route('violation')->with('success', 'Data Berhasil Di Tambahkan');
+        return redirect()->route('data')->with('success', 'Data Berhasil Di Tambahkan');
     }
     public function delete_trans($id)
     {
         $data = DB::table('guru_siswas')->where('siswa_id', $id);
         $data->delete();
-        return redirect()->route('violation')->with('success', 'Data Berhasil Di Hapus');
+        return redirect()->route('data')->with('success', 'Data Berhasil Di Hapus');
     }
 }

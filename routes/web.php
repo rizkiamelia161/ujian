@@ -26,7 +26,7 @@ use App\Http\Controllers\tambahController;
 
 Route::controller(dataController::class)->group(function(){
 
-    Route::get('violation', 'index')->name('violation');
+    Route::get('data', 'index')->name('data');
 
 });
 

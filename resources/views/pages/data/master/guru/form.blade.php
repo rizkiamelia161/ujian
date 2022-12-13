@@ -8,43 +8,15 @@
     <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
     <div class="sidebar-brand">
-    <a href="#">Violation Book</a>
-    
-    <!-- close sidebar -->
-    <!-- <div id="close-sidebar" class="hidden">
-    <i class="fas fa-times"></i>
-    </div> -->
+    <a href="#">Buku Komunikasi Siswa</a>
     </div>
     <div class="sidebar-header">
-    <div class="user-pic">
-    <img class="img-responsive img-rounded" src="https://avatars.githubusercontent.com/u/79699856?s=400&u=c37075b5d4cc71e1f8d5bd8212613591ab975f67&v=4">
-    </div>
     <div class="user-info">
     <span class="user-name">
-    <strong>Qiraxyz</strong>
-    </span>
-    <span class="user-role">Owner</span>
-    <span class="user-status">
-    <i class="fa fa-circle"></i>
-    <span>Online</span>
+    <strong>Rizki Amelia</strong>
     </span>
     </div>
-    </div>
-    <!-- sidebar-header -->
-    
-    <!-- <div class="sidebar-search">
-    <div>
-    <div class="input-group">
-    <input type="text" class="form-control search-menu" placeholder="Search...">
-    <div class="input-group-append">
-    <span class="input-group-text">
-    <i class="fa fa-search" aria-hidden="true"></i>
-    </span>
-    </div>
-    </div>
-    </div>
-    </div> -->
-    <!-- sidebar-search -->
+</div>
     
     <div class="sidebar-menu">
     <ul>
@@ -73,38 +45,10 @@
     </ul>
     </div>
     </li>
-    
-    
-    <!-- E-commerce -->
-    
-    <!-- <li class="sidebar-dropdown">
-    <a href="feedback.php">
-    <i class="fa fa-shopping-cart"></i>
-    <span>Feedback</span> -->
-    <!-- <span class="badge badge-pill badge-danger">3</span> -->
-    <!-- </a>
-    <div class="sidebar-submenu">
-    <ul>
-    <li>
-    <a href="#">Products
-    </a>
-    </li>
-    <li>
-    <a href="#">Orders</a>
-    </li>
-     <li>
-    <a href="#">Credit cart</a>
-    </li>
-    </ul>
-    </div>
-    </li> -->
-    
-    <!-- Component -->
-    
 <li class="sidebar-dropdown">
-    <a href="violation" class="hover-dashboard">
+    <a href="data" class="hover-dashboard">
     <i class="far fa-gem"></i>
-    <span>Violation</span>
+    <span>Data</span>
     </a>
     <div class="sidebar-submenu">
     <ul>
@@ -125,96 +69,17 @@
     </li>
     </ul>
     </div>
-    </li>
-    
-    
-    
-    
-    <!-- charts -->
-    
-    <!-- <li class="sidebar-dropdown">
-    <a href="#">
-    <i class="fa fa-chart-line"></i>
-    <span>Charts</span>
-    </a>
-    <div class="sidebar-submenu">
-    <ul>
-    <li>
-    <a href="#">Pie chart</a>
-    </li>
-    <li>
-    <a href="#">Line chart</a>
-    </li>
-    <li>
-    <a href="#">Bar chart</a>
-    </li>
-    <li>
-    <a href="#">Histogram</a>
-    </li>
-    </ul>
+</li>
     </div>
-    </li> -->
-    
-    
-    
-    
-    <!-- maps -->
-    
-    <!-- <li class="sidebar-dropdown">
-    <a href="#">
-    <i class="fa fa-globe"></i>
-    <span>Maps</span>
-    </a>
-    <div class="sidebar-submenu">
-    <ul>
-    <li>
-    <a href="#">Google maps</a>
-    </li>
-    <li>
-    <a href="#">Open street map</a>
-    </li>
-    </ul>
-    </div>
-    </li>
-    <li class="header-menu">
-    <span>Extra</span>
-    </li>
-    <li>
-    <a href="#">
-    <i class="fa fa-book"></i>
-    <span>Documentation</span>
-    <span class="badge badge-pill badge-primary">Beta</span>
-    </a>
-    </li>
-    <li>
-    <a href="#">
-    <i class="fa fa-calendar"></i>
-    <span>Calendar</span>
-    </a>
-    </li>
-    <li>
-    <a href="#">
-    <i class="fa fa-folder"></i>
-    <span>Examples</span>
-    </a>
-    </li>
-    </ul>
-    </div> -->
-    <!-- sidebar-menu -->
-    </div>
-    <!-- sidebar-content -->
     <div class="sidebar-footer">
     <a href="#">
     <i class="fa fa-bell"></i>
-    <!-- <span class="badge badge-pill badge-warning notification">3</span> -->
     </a>
     <a href="#">
     <i class="fa fa-envelope"></i>
-    <!-- <span class="badge badge-pill badge-success notification">7</span> -->
     </a>
     <a href="#">
     <i class="fa fa-cog"></i>
-    <!-- <span class="badge-sonar"></span> -->
     </a>
     <a href="{{ route('logout') }}">
     <i class="fa fa-power-off"></i>
@@ -226,14 +91,9 @@
     <div class="form">
         <form action="insertguru" method="POST">
             @csrf
-          <!-- data pelanggan judul -->
-          <!-- nama siswa -->
           <p><Label>Nama Guru : <input required="required" type="text" name="nama_guru"></Label></p>
-          <!-- kelas siswa -->
           <p><Label>Mata Pelajaran : <input required="required" type="text" name="mata_pelajaran"></Label></p>
-          <!-- jurusan siswa -->
           <p><label>alamat : <input required="required" type="text" name="alamat"></label></p>
-          <!-- nisn siswa -->
           <p><Label>Umur : <input  required="required" type="text" name="umur"></Label></p>
           <br>
           <br>
